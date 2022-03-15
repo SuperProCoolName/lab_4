@@ -19,9 +19,20 @@ void main() {
                 array[i + 1] = temp;
             }
         }
-    }
+    } // task 1
 
+    int counter = 0, min = 0;
+    int* pointer_min = &min;
     for (int i = 0; i < n; i++) {
+        int number = array[i];
+        if (number % 3 == 0) {
+            counter++;
+        } // task 2
+        if (number < min) {
+            min = number;
+        }
+        pointer_min = &min; // task 3 
         cout << array[i] << ' ';
     }
+    cout << "number of multiples of 3: " << counter << endl << "adress of min among negative numbers = " << pointer_min;
 }
